@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In to DOOit | Make Everyday Productive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="clearfix">
+        <img src="Image/home.jpg" alt="image here">
+    
+     <div class="container">
+         <h1>Sign In</h1>
+         <form id="signin-form"method="post" action="Menu.html" onsubmit="newPage2()" >
+            <input type="text" name="email" placeholder="Enter Email" id="new_email"oninput="myFunction2"><br>
+            <span id="email_error2"></span><br>
+            <input type="password" name="password" placeholder="Enter password" id="new_password"oninput="myFunction2"><br>
+            <span id="password_error2"></span><br>
+            <button type="submit" name="btn" class="button">Sign In</button><br>
+            <p class="link">Don't have an account yet?<span id="link2"><a href="sign up.html">Sign up</a></span></p>
+
+         </form>
+     </div>
+  </div>
+    <footer>
+            <hr>
+            <div id="paragraph">
+                 <p>© 2024 DOOit. All Rights Reserved.</p>
+            </div>
+            <div id="p1">
+                <ul class="footer-link">
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+    </footer>
+    <script>
+        const signin_form = document.getElementById('signin-form');
+        const newEmail = document.getElementById('new_email');
+        const newPass = document.getElementById('new_password');
+
+        const email_error2 = document.getElementById('email_error2');
+        const password_error2 = document.getElementById('password_error2');
+
+        email_error2.textContent = '';
+        password_error2.textContent = '';
+
+
+        function myFunction2(){
+           if(email2.value!==''){
+           email_error2=''
+           }
+           if(password2.value!==''){
+           password_error2=''
+           }
+          }
+
+
+
+        signin_form.addEventListener('submit', (e)=>{
+        
+
+          var reGex = /^([A-Za-z0-9.%_])+@([A-Za-z0-9._-])+\.([A-Za-z]{2,4})$/;
+  
+             if(!new_email.value.match(reGex)){
+                   email_error2.innerHTML = "Please enter a valid email. Try adding the @ symbol*";
+                    e.preventDefault();//stops browser fro submitting the form
+    
+
+              }else{
+                   email_error2.textContent='';
+    
+               }
+               if(new_password.value.length < 8){
+                    password_error2.innerHTML = "Password should be atleast 8 characters long*";
+                    e.preventDefault();//stops browser fro submitting the form
+              }else{
+                  password_error2.textContent='';
+    
+              }
+
+              
+               function newPage2(){
+                  return true;
+                }
+            });
+    </script>
+</body>
+</html>

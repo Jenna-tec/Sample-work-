@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up to DOOit | Make Everyday Productive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+
+
+</head>
+<body>
+    <div class="clearfix">
+        <img src="Image/home.jpg" alt="image here">
+    
+  
+     <div class="container">
+        <h1 >Sign Up</h1>
+        <form  id="signup-form" method="post" action="Menu.html" onsubmit="newPage()">
+          <div class="input-data">
+            <input type="text" name="fname" placeholder="First Name" id="fname" oninput="myFunction" ><br>
+            <span id="fname_error"></span><br>
+            <input type="text" name="lname" placeholder="Last Name" id="lname"oninput="myFunction" ><br>
+            <span id="lname_error"></span><br>
+            <input type="text" name="email" placeholder="Enter Email" id="email"oninput="myFunction" ><br>
+            <span id="email_error"></span><br>
+            <input type="password" name="password" placeholder="Enter Password" id="password"oninput="myFunction" ><br>
+            <span id="password_error"></span><br>
+            <button type="submit" name="btn" class="button">Sign up</button><br>
+            <p class="link">Already have an account?<span id="link2"><a href="sign in .html">Sign in</a></span></p>
+          </div>
+        </form>
+     </div>
+  </div>
+    <footer>
+            <hr>
+            <div id="paragraph">
+                <p>© 2024 DOOit. All Rights Reserved.</p>
+            </div>   
+            <div id="p1">
+                <ul class="footer-link">
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
